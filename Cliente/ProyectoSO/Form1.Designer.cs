@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.desconectarse = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.conectados_bttn = new System.Windows.Forms.RadioButton();
             this.Enviar = new System.Windows.Forms.Button();
             this.ConsultaDavid = new System.Windows.Forms.RadioButton();
             this.ConsultaFerran = new System.Windows.Forms.RadioButton();
@@ -67,6 +68,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBox1.Controls.Add(this.conectados_bttn);
             this.groupBox1.Controls.Add(this.Enviar);
             this.groupBox1.Controls.Add(this.ConsultaDavid);
             this.groupBox1.Controls.Add(this.ConsultaFerran);
@@ -79,9 +81,20 @@
             this.groupBox1.Controls.Add(this.usuario);
             this.groupBox1.Location = new System.Drawing.Point(104, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(444, 214);
+            this.groupBox1.Size = new System.Drawing.Size(444, 234);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // conectados_bttn
+            // 
+            this.conectados_bttn.AutoSize = true;
+            this.conectados_bttn.Location = new System.Drawing.Point(145, 197);
+            this.conectados_bttn.Name = "conectados_bttn";
+            this.conectados_bttn.Size = new System.Drawing.Size(176, 21);
+            this.conectados_bttn.TabIndex = 7;
+            this.conectados_bttn.TabStop = true;
+            this.conectados_bttn.Text = "Numero de conectados";
+            this.conectados_bttn.UseVisualStyleBackColor = true;
             // 
             // Enviar
             // 
@@ -211,6 +224,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox contraseña;
         private System.Windows.Forms.TextBox usuario;
+        private System.Windows.Forms.RadioButton conectados_bttn;
     }
 }
 
