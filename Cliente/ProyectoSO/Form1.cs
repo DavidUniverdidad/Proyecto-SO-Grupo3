@@ -127,7 +127,7 @@ namespace ProyectoSO
 
             else if (conectados_bttn.Checked)
             {
-                string mensaje = "6/";
+                string mensaje = "6/";//Obtener usuarios online
                 // Enviamos al servidor el nombre tecleado
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
