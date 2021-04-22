@@ -72,6 +72,7 @@
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(135, 22);
             this.usuario.TabIndex = 0;
+            this.usuario.TextChanged += new System.EventHandler(this.usuario_TextChanged);
             // 
             // contraseña
             // 

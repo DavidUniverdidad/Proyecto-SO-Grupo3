@@ -23,7 +23,7 @@ namespace ProyectoSO
         {
             //Creamos un IPEndPoint con el ip del servidor y puerto del servidor 
             //al que deseamos conectarnos
-            IPAddress direc = IPAddress.Parse("192.168.56.103");
+            IPAddress direc = IPAddress.Parse("192.168.56.102");
             IPEndPoint ipep = new IPEndPoint(direc, 9060);
 
 
@@ -190,6 +190,11 @@ namespace ProyectoSO
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+        }
+
+        private void usuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
