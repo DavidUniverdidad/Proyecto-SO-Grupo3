@@ -11,3 +11,5 @@
 
 ##### Versión 2 generada por Ferran
 ##### Versión 2 verificada por David
+###### Versión 2 comunicada por Sergi
+- URL: [Vídeo V2](https://www.youtube.com/watch?v=aYSv9-FWPQY "Video V2")
