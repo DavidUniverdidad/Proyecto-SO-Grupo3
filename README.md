@@ -11,4 +11,6 @@
 
 ###### Versión 2 modificada por Ferran*
 ###### Versión 2 verificada por Ferran*
+
 ###### Versión 2 generada por Ferran
+###### Versión 2 verificada por David
