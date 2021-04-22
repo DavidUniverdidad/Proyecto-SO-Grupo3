@@ -23,8 +23,8 @@ namespace ProyectoSO
         {
             //Creamos un IPEndPoint con el ip del servidor y puerto del servidor 
             //al que deseamos conectarnos
-            IPAddress direc = IPAddress.Parse("192.168.56.102");
-            IPEndPoint ipep = new IPEndPoint(direc, 9010);
+            IPAddress direc = IPAddress.Parse("192.168.56.103");
+            IPEndPoint ipep = new IPEndPoint(direc, 9060);
 
 
             //Creamos el socket 
@@ -79,6 +79,11 @@ namespace ProyectoSO
                 if (mensaje == "Done")
                 {
                     MessageBox.Show("User Logged");
+
+                    Form2 game = new Form2();
+                    game.GetUser(usuario.Text);
+
+                    game.Show();
                 }
                 else
                 {
@@ -151,6 +156,40 @@ namespace ProyectoSO
             this.BackColor = Color.Red;
             server.Shutdown(SocketShutdown.Both);
             server.Close();
+        }
+
+        private void Enviar_MouseEnter(object sender, EventArgs e)
+        {
+            Enviar.ForeColor = Color.White;
+        }
+
+        private void Enviar_MouseLeave(object sender, EventArgs e)
+        {
+            Enviar.ForeColor = Color.Black;
+        }
+
+        private void Loguearse_MouseEnter(object sender, EventArgs e)
+        {
+            Loguearse.ForeColor = Color.Red;
+        }
+
+        private void Loguearse_MouseLeave(object sender, EventArgs e)
+        {
+            Loguearse.ForeColor = Color.White;
+        }
+
+        private void Registrarse_MouseEnter(object sender, EventArgs e)
+        {
+            Registrarse.ForeColor = Color.Red;
+        }
+
+        private void Registrarse_MouseLeave(object sender, EventArgs e)
+        {
+            Registrarse.ForeColor = Color.White;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
         }
     }
 }

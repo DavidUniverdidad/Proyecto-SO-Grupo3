@@ -8,9 +8,11 @@
 #include <mysql.h>
 #include <pthread.h>
 
+	
 typedef struct{//Object 
 	
 	char username[20];
+	
 	
 }TConnected;
 
@@ -20,10 +22,14 @@ typedef struct{//Lista de ususarios conectados
 	int num;
 	
 }TListConnected;
+
+
+
+TListConnected list;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 	
 void GetConnectedUsers(TListConnected *list,char online_users[300]){
 	
-	printf("Entrada funcion\n");
 	int i=0;
 	sprintf(online_users,"%d",list->num);
 	printf("%d\n",list->num);
@@ -46,7 +52,6 @@ int AddUser(TListConnected *list, char name[20]){//Añadir usuario a la lista
 		strcpy(list->conected[list->num].username,name);//Añadir el nombre del usuario a la lista
 		printf("%s,%d\n",list->conected[list->num].username,list->num);
 		list->num++;//Incremento de la lista 1 ud
-		printf("%d actualizado\n",list->num);
 		
 		return 0;
 	}
@@ -75,7 +80,7 @@ void Register (char username[20], char password[20])
 	err=mysql_query (conn, "SELECT * FROM PLAYER");//Realizar consulta a BBDD, mostrar todo contenido PLAYER
 	if (err!=0)
 	{
-		printf ("Error while trying to get data from database %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to request %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	resultado = mysql_store_result (conn);//Devuelve Resultado tipo tabla
@@ -157,7 +162,7 @@ int Login(char username[20], TListConnected *list,char password[20]){
 	}
 	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexión con BBDD
 	if (conn==NULL) {
-		printf ("Error al inicializar la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to initialize database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
@@ -166,7 +171,7 @@ int Login(char username[20], TListConnected *list,char password[20]){
 	err=mysql_query (conn, consulta);//Se realiza la consulta (insertar usuarios al sistema)
 	
 	if (err!=0) {
-		printf ("Error al realizar la consulta en la bbdd %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to request %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	resultado = mysql_store_result (conn);
@@ -196,12 +201,12 @@ float GetRatio(char username[20], char password[20])
 	
 	conn = mysql_init(NULL);//Crear consulta
 	if (conn==NULL) {
-		printf ("Error al crear la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while connecting to database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexión con BBDD
 	if (conn==NULL) {
-		printf ("Error al inicializar la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to initialize database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
@@ -210,7 +215,7 @@ float GetRatio(char username[20], char password[20])
 	err=mysql_query (conn, consulta);//Se realiza la consulta (insertar usuarios al sistema)
 	
 	if (err!=0) {
-		printf ("Error al realizar la consulta en la bbdd %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to request %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	resultado = mysql_store_result (conn);
@@ -218,7 +223,7 @@ float GetRatio(char username[20], char password[20])
 	
 	if (row == NULL){
 		
-		printf ("No hay nadie con ese nombre\n");
+		printf ("User not found\n");
 		return -1;
 	}
 	
@@ -236,7 +241,7 @@ float GetRatio(char username[20], char password[20])
 	printf("Result: %f\n",res);
 	return res;
 }
-int ConsultaDavid(char username[20],char password[20])
+int GetDuration(char username[20],char password[20])
 {
 	MYSQL *conn;
 	int err;
@@ -247,12 +252,12 @@ int ConsultaDavid(char username[20],char password[20])
 	
 	conn = mysql_init(NULL);//Crear consulta
 	if (conn==NULL) {
-		printf ("Error al crear la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while connecting to database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexión con BBDD
 	if (conn==NULL) {
-		printf ("Error al inicializar la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to initialize database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
@@ -269,16 +274,16 @@ int ConsultaDavid(char username[20],char password[20])
 	
 	if (row == NULL){
 		
-		printf ("No hay nadie con ese nombre\n");
+		printf ("User not found\n");
 		return -1;
 	}
 	
 	//row = mysql_fetch_row (resultado);
-	printf("La duracion: %s \n", row[0]);
+	//printf("Duration of a game is: %s \n", row[0]);
 	int tiempo=atoi(row[0]);
-	printf("La duracion convertida en un integer es: %d\n", tiempo);
+	printf("Game Duration: %d\n", tiempo);
 	mysql_close(conn);
-	printf("La duracion convertida en un integer es antes del return %d\n", tiempo);
+	
 	return tiempo;
 }
 int ConsultaSergi(char username[20], char password[20])
@@ -297,7 +302,7 @@ int ConsultaSergi(char username[20], char password[20])
 	}
 	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexión con BBDD
 	if (conn==NULL) {
-		printf ("Error al inicializar la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to initialize database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
@@ -334,8 +339,6 @@ void *AtenderCliente (void *socket)
 	char buff[512];
 	char buff2[512];
 	int ret;
-	TListConnected list;
-	list.num=0;
 	
 	int kill=0;//Para desconectar socket
 	
@@ -376,7 +379,10 @@ void *AtenderCliente (void *socket)
 		
 		else if (codigo ==2){//Login
 			int res;
+			
+			pthread_mutex_lock(&mutex);//No interrumpir
 			res=Login(username,&list,password);
+			pthread_mutex_unlock(&mutex);//Ya puedes interrumpir
 			
 			if(res==0){//Existe usuario en el sistema
 				
@@ -400,7 +406,7 @@ void *AtenderCliente (void *socket)
 		{
 			printf ("paso3\n");
 			int res1;
-			res1 = ConsultaDavid(username,password);
+			res1 = GetDuration(username,password);
 			printf("el valor es: %d \n", res1);
 			sprintf(buff2,"el tiempo maximo de una partida es: %d", res1);
 		}
@@ -451,13 +457,15 @@ void *AtenderCliente (void *socket)
 	}
 	close(sock_conn); //Cerrar conexión
 }
+
+
 int main(int argc, char *argv[])
 {
 	int sock_conn, sock_listen, ret;
 	struct sockaddr_in serv_adr;
 	char buff[512];
 	char buff2[512];
-	TListConnected list;
+	
 	list.num=0;
 	
 
@@ -472,14 +480,14 @@ int main(int argc, char *argv[])
 	//htonl formatea el numero que recibe al formato necesario
 	serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);
 	// escucharemos en el port 9050
-	serv_adr.sin_port = htons(9093);
+	serv_adr.sin_port = htons(9060);
 	if (bind(sock_listen, (struct sockaddr *) &serv_adr, sizeof(serv_adr)) < 0)
 		printf ("Bind Error");
 	//La cola de peticiones pendientes no podr? ser superior a 4
 	if (listen(sock_listen, 2) < 0)
 		printf("Listening Error");
 	
-	int i;
+	int i=0;
 	int socket[100];
 	pthread_t thread[100];
 	
@@ -489,11 +497,15 @@ int main(int argc, char *argv[])
 		
 		sock_conn = accept(sock_listen, NULL, NULL);
 		printf ("User connected\n");
+		printf("%d\n",sock_conn);
 		
 		socket[i] = sock_conn;
+		
 		//sock_conn es el socket que usaremos para este cliente
 		
 		//crear thead y decirle lo que tiene que hacer
+		printf("Entrada /n");
 		pthread_create (&thread[i], NULL, AtenderCliente,&socket[i]);
+		i++;
 	}
 }
