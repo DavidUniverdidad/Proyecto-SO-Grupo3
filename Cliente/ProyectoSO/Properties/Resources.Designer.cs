@@ -63,6 +63,82 @@ namespace ProyectoSO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _56_569958_dice_game_hd_png_download_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("56-569958_dice-game-hd-png-download-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dado2 {
+            get {
+                object obj = ResourceManager.GetObject("dado2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dado21 {
+            get {
+                object obj = ResourceManager.GetObject("dado21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream dados {
+            get {
+                return ResourceManager.GetStream("dados", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dark_gradient_blue_background_1258_1365 {
+            get {
+                object obj = ResourceManager.GetObject("dark-gradient-blue-background_1258-1365", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream fsx {
+            get {
+                return ResourceManager.GetStream("fsx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream fsx_radio_bttn {
+            get {
+                return ResourceManager.GetStream("fsx_radio_bttn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream fsx_sonido_puntero {
+            get {
+                return ResourceManager.GetStream("fsx_sonido_puntero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hexagonal_technology_pattern_mesh_background_with_text_space_1017_26293 {
             get {
                 object obj = ResourceManager.GetObject("hexagonal-technology-pattern-mesh-background-with-text-space_1017-26293", resourceCulture);
@@ -76,6 +152,54 @@ namespace ProyectoSO.Properties {
         internal static System.Drawing.Bitmap Logo_UPC_svg {
             get {
                 object obj = ResourceManager.GetObject("Logo_UPC.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap photo_1579546929518_9e396f3cc809 {
+            get {
+                object obj = ResourceManager.GetObject("photo-1579546929518-9e396f3cc809", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProyectoSO {
+            get {
+                object obj = ResourceManager.GetObject("ProyectoSO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream sound_menu {
+            get {
+                return ResourceManager.GetStream("sound_menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream sound_start {
+            get {
+                return ResourceManager.GetStream("sound_start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("user-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

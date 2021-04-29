@@ -2,18 +2,13 @@
 
 ## Versión 1
 
-##### Versión 1 generada por David
-##### Versión 1 verificada por Sergi
-##### Versión 1 comunicada por Ferran 
+###### Versión 1 generada por David
+###### Versión 1 verificada por Sergi
+###### Versión 1 comunicada por Ferran 
 - URL: [Vídeo V1](https://www.youtube.com/watch?v=ZR2qrZJVmGo&t=175s "Video V1")
 
 ## Versión 2
 
-##### Versión 2 generada por Ferran
-##### Versión 2 verificada por David
-##### Versión 2 comunicada por Sergi
-- URL: [Vídeo V2](https://www.youtube.com/watch?v=aYSv9-FWPQY "Video V2")
-
-## Versión 3
-
-##### Versión 3 generada por Sergi
+###### Versión 2 modificada por Ferran*
+###### Versión 2 verificada por Ferran*
+###### Versión 2 generada por Ferran
