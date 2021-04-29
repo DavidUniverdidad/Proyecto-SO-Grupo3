@@ -135,8 +135,8 @@ namespace ProyectoSO
         private void pictureBox2_Click_1(object sender, EventArgs e)//DADO
         {
             int count = 0;
-            pictureBox2.Image = Image.FromFile(@"C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\bin\Debug\dado2.gif");
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+           // pictureBox2.Image = Image.FromFile(@"C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\bin\Debug\dado2.gif");
+            //pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
 
             System.Media.SoundPlayer sonido_dados = new System.Media.SoundPlayer(Properties.Resources.dados);
             sonido_dados.Play();

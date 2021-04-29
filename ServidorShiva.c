@@ -6,10 +6,13 @@
 #include <netinet/in.h>
 #include <stdio.h>
 #include <mysql.h>
+#include <pthread.h>
 
+	
 typedef struct{//Object 
 	
 	char username[20];
+
 	
 }TConnected;
 
@@ -20,9 +23,17 @@ typedef struct{//Lista de ususarios conectados
 	
 }TListConnected;
 
-void GetConnectedUsers(TListConnected *list,char online_users[300]){
+
+
+
+TListConnected list;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
+int i=0;
+int sockets[100];
 	
-	printf("Entrada funcion\n");
+void GetConnectedUsers(TListConnected *list,char online_users[100]){
+	
 	int i=0;
 	sprintf(online_users,"%d",list->num);
 	printf("%d\n",list->num);
@@ -45,11 +56,36 @@ int AddUser(TListConnected *list, char name[20]){//Añadir usuario a la lista
 		strcpy(list->conected[list->num].username,name);//Añadir el nombre del usuario a la lista
 		printf("%s,%d\n",list->conected[list->num].username,list->num);
 		list->num++;//Incremento de la lista 1 ud
-		printf("%d actualizado\n",list->num);
 		
 		return 0;
 	}
 }
+
+int DeleteUser(TListConnected *list,char name[20]){//Eliminar usuario de la lista
+	
+	int i=0;
+	int encontrado=0;
+	
+	while((i<list->num)&&(encontrado==0)){
+		if(strcmp(list->conected[i].username,name)==0){
+			encontrado=1;
+		}
+		else{
+			i++;
+		}
+	}
+	if(encontrado==1){
+		strcpy(list->conected[i].username,list->conected[i+1].username);
+		printf("Eliminado: %s,Num Usuarios: %d\n",name,list->num);
+		list->num=list->num-1;
+		return 0;
+	}
+	else{
+		return -1;//error
+	}
+}
+
+
 
 void Register (char username[20], char password[20])
 {
@@ -65,15 +101,16 @@ void Register (char username[20], char password[20])
 		printf ("Error while connecting to database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexion con BBDD
+	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T3_trivial",0, NULL, 0);//Iniciar conexion con BBDD
 	if (conn==NULL) {
 		printf ("Error while trying to connect to database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
 	err=mysql_query (conn, "SELECT * FROM PLAYER");//Realizar consulta a BBDD, mostrar todo contenido PLAYER
-	if (err!=0) {
-		printf ("Error while trying to get data from database %u %s\n", mysql_errno(conn), mysql_error(conn));
+	if (err!=0)
+	{
+		printf ("Error while trying to request %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	resultado = mysql_store_result (conn);//Devuelve Resultado tipo tabla
@@ -88,25 +125,28 @@ void Register (char username[20], char password[20])
 	if (row == NULL)
 		printf ("No data from request\n");//No hay fila, por tanto la tabla está vacía (no hay resultado)
 	else
-		while (row !=NULL) {
+		while (row !=NULL) 
+		{
 			// las columnas 0 y 1 contienen DNI y nombre 
 			printf ("Player %i; Name: %s, Password: %s, Wins: %s\n", i, row[1], row[2], row[3]);
 			// obtenemos la siguiente fila
 			row = mysql_fetch_row (resultado);//Cada vez que se ejecuta da la siguiente fila
 			i++;
-	}
+		}
 		
 		sprintf (consulta,"INSERT INTO PLAYER VALUES(%d,'%s','%s',0,0,0)",i,username,password);//Generamos la sentencia de consulta
 		// hacemos la consulta 
 		err=mysql_query (conn, consulta);//Se realiza la consulta (insertar usuarios al sistema)
 		
-		if (err!=0) {
+		if (err!=0)
+		{
 			printf ("Error while adding users to the system %u %s\n", mysql_errno(conn), mysql_error(conn));
 			exit (1);
 		}
 		
 		err=mysql_query (conn, "SELECT * FROM PLAYER");//Consulta para ver lo que se ha a�adido
-		if (err!=0) {
+		if (err!=0)
+		{
 			printf ("Error while trying to get data from database %u %s\n", mysql_errno(conn), mysql_error(conn));
 			exit (1);
 		}
@@ -117,7 +157,8 @@ void Register (char username[20], char password[20])
 		if (row == NULL)
 			printf ("No data from request\n");
 		
-		else{
+		else
+		{
 			
 			i=1;
 			printf("\n");
@@ -149,9 +190,9 @@ int Login(char username[20], TListConnected *list,char password[20]){
 		printf ("Error while connecting to database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexión con BBDD
+	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T3_trivial",0, NULL, 0);//Iniciar conexión con BBDD
 	if (conn==NULL) {
-		printf ("Error al inicializar la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to initialize database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
@@ -160,7 +201,7 @@ int Login(char username[20], TListConnected *list,char password[20]){
 	err=mysql_query (conn, consulta);//Se realiza la consulta (insertar usuarios al sistema)
 	
 	if (err!=0) {
-		printf ("Error al realizar la consulta en la bbdd %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to request %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	resultado = mysql_store_result (conn);
@@ -190,12 +231,12 @@ float GetRatio(char username[20], char password[20])
 	
 	conn = mysql_init(NULL);//Crear consulta
 	if (conn==NULL) {
-		printf ("Error al crear la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while connecting to database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexión con BBDD
+	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T3_trivial",0, NULL, 0);//Iniciar conexión con BBDD
 	if (conn==NULL) {
-		printf ("Error al inicializar la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to initialize database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
@@ -204,7 +245,7 @@ float GetRatio(char username[20], char password[20])
 	err=mysql_query (conn, consulta);//Se realiza la consulta (insertar usuarios al sistema)
 	
 	if (err!=0) {
-		printf ("Error al realizar la consulta en la bbdd %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to request %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	resultado = mysql_store_result (conn);
@@ -212,7 +253,7 @@ float GetRatio(char username[20], char password[20])
 	
 	if (row == NULL){
 		
-		printf ("No hay nadie con ese nombre\n");
+		printf ("User not found\n");
 		return -1;
 	}
 	
@@ -230,7 +271,7 @@ float GetRatio(char username[20], char password[20])
 	printf("Result: %f\n",res);
 	return res;
 }
-int ConsultaDavid(char username[20],char password[20])
+int GetDuration(char username[20],char password[20])
 {
 	MYSQL *conn;
 	int err;
@@ -241,12 +282,12 @@ int ConsultaDavid(char username[20],char password[20])
 	
 	conn = mysql_init(NULL);//Crear consulta
 	if (conn==NULL) {
-		printf ("Error al crear la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while connecting to database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexión con BBDD
+	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T3_trivial",0, NULL, 0);//Iniciar conexión con BBDD
 	if (conn==NULL) {
-		printf ("Error al inicializar la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to initialize database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
@@ -263,16 +304,16 @@ int ConsultaDavid(char username[20],char password[20])
 	
 	if (row == NULL){
 		
-		printf ("No hay nadie con ese nombre\n");
+		printf ("User not found\n");
 		return -1;
 	}
 	
 	//row = mysql_fetch_row (resultado);
-	printf("La duracion: %s \n", row[0]);
+	//printf("Duration of a game is: %s \n", row[0]);
 	int tiempo=atoi(row[0]);
-	printf("La duracion convertida en un integer es: %d\n", tiempo);
+	printf("Game Duration: %d\n", tiempo);
 	mysql_close(conn);
-	printf("La duracion convertida en un integer es antes del return %d\n", tiempo);
+	
 	return tiempo;
 }
 int ConsultaSergi(char username[20], char password[20])
@@ -289,9 +330,9 @@ int ConsultaSergi(char username[20], char password[20])
 		printf ("Error al crear la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
-	conn = mysql_real_connect (conn, "localhost","root", "mysql", "trivial",0, NULL, 0);//Iniciar conexión con BBDD
+	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T3_trivial",0, NULL, 0);//Iniciar conexión con BBDD
 	if (conn==NULL) {
-		printf ("Error al inicializar la conexión: %u %s\n", mysql_errno(conn), mysql_error(conn));
+		printf ("Error while trying to initialize database: %u %s\n", mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
 	
@@ -313,11 +354,180 @@ int ConsultaSergi(char username[20], char password[20])
 	}
 	
 	//row = mysql_fetch_row (resultado);
-	printf("EL toal que me interesa Wins: %s Total: %s \n", row[0]);
+	printf("EL total de Wins es: %s\n", row[0]);
 	int wins=atoi(row[0]);
 	mysql_close(conn);
 	return wins;
 }
+void *AtenderCliente (void *socket)
+{
+	int sock_conn;
+	int *s;
+	s= (int *) socket;
+	sock_conn= *s;
+	
+	char buff[512];
+	char buff2[512];
+	int ret;
+	
+	int kill=0;//Para desconectar socket
+	
+	while(kill==0) //Bucle de demanda de servicios
+	{
+		
+		ret=read(sock_conn,buff, sizeof(buff));
+		printf ("Data received\n");
+		
+		
+		buff[ret]='\0';//Se añade marca de fin de líne de la string
+		
+		printf ("Packet received: %s\n",buff);
+		
+		char *p = strtok( buff, "/");
+		int codigo =  atoi (p);//Extracción de código del servicio
+		char username[20];
+		char password[20];
+		
+		if(codigo==0){
+			
+			int res=DeleteUser(&list,username);
+			if(res==0){
+				printf("Deleted from list\n");
+				//Notificacion
+					char online_users[300];
+					printf("entrada servicio\n");
+					GetConnectedUsers(&list,online_users);
+					printf("Online users: %s\n",online_users);
+					
+					if(online_users==NULL){
+						printf("No users connected at this moment\n");
+					}
+					else
+					{
+						char notificacion[100];
+						sprintf(notificacion,"6/%s",online_users);
+						
+						int j=0;
+						while(j<i){
+							write (sockets[j],notificacion, strlen(notificacion));
+							j++;
+						}
+					}
+				
+			}
+			else{
+				printf("Couldn't deleted from list\n");
+			}
+			kill=1;//Acabar bucle(Usuario desconectado)
+		}
+		
+		if((codigo!=0)&&(codigo!=6)){//Extracción de info
+			p = strtok( NULL, "/");  
+			strcpy(username,p);
+			p = strtok( NULL, "/");
+			strcpy(password,p);
+			
+			printf ("Username: %s, Password: %s\n",username,password);
+			
+		}
+		
+		if (codigo ==1){//Registrarse a la BBDD
+			Register(username,password);//Función de registro a la BBDD
+			strcpy(buff2,"1/Done");
+		}		
+		
+		if (codigo ==2){//Login
+			int res;
+			
+			pthread_mutex_lock(&mutex);//No interrumpir
+			res=Login(username,&list,password);
+			pthread_mutex_unlock(&mutex);//Ya puedes interrumpir
+			
+			if(res==0){//Existe usuario en el sistema
+				
+				pthread_mutex_lock(&mutex);//No interrumpir
+				int user_added = AddUser(&list,username);//A�adir usuario lista conectados
+				pthread_mutex_unlock(&mutex);//Ya puedes interrumpir
+				
+				if(user_added==0){
+					printf("User %s added to list correctly\n",username);
+					strcpy(buff2,"2/Done");
+				}
+				else{
+					printf("Error adding user to the list\n");
+				}
+			}
+			
+			else{
+				printf("No user with this username\n");//No existe usuario en el sistema
+				strcpy(buff2,"2/Fail");
+			}
+			
+		}		
+		if (codigo == 3)//Siguiente servicio
+		{
+			printf ("paso3\n");
+			int res1;
+			res1 = GetDuration(username,password);
+			printf("el valor es: %d \n", res1);
+			sprintf(buff2,"3/el tiempo maximo de una partida es: %d", res1);
+		}
+		if (codigo ==4)
+		{//Siguiente servicio
+			
+			float ratio;
+			ratio=GetRatio(username,password);
+			if(ratio > 0){
+				sprintf(buff2,"4/%f,",ratio);
+				//strcpy(buff2,"Done,");
+			}
+			else
+			   strcpy(buff2,"4/Fail,");
+			
+		}
+		
+		if (codigo ==5)
+		{//Siguiente servicio
+			
+			int res2 = ConsultaSergi(username,password);
+			sprintf(buff2,"5/%d,",res2);
+		}
+		
+		if ((codigo ==1)|(codigo ==2)|(codigo ==3)|(codigo ==4)|(codigo ==5))//Notificacion
+		{//Servicio de clientes online
+			
+			char online_users[300];
+			printf("entrada servicio\n");
+			GetConnectedUsers(&list,online_users);
+			printf("Online users: %s\n",online_users);
+			
+			if(online_users==NULL){
+				printf("No users connected at this moment\n");
+			}
+			else
+			{
+				char notificacion[100];
+				sprintf(notificacion,"6/%s",online_users);
+				
+				int j=0;
+				while(j<i){
+					write (sockets[j],notificacion, strlen(notificacion));
+					j++;
+				}
+			}
+		}
+		if(codigo!=0){
+			printf ("%s\n", buff2);
+			// Y lo enviamos
+			write (sock_conn,buff2, strlen(buff2));
+		}
+		// Se acabo el servicio para este cliente
+		
+	}
+	close(sock_conn); //Cerrar conexión
+}
+
+
 
 int main(int argc, char *argv[])
 {
@@ -325,8 +535,6 @@ int main(int argc, char *argv[])
 	struct sockaddr_in serv_adr;
 	char buff[512];
 	char buff2[512];
-	TListConnected list;
-	list.num=0;
 	
 
 	if ((sock_listen = socket(AF_INET, SOCK_STREAM, 0)) < 0)//Abrimos Socket
@@ -340,135 +548,30 @@ int main(int argc, char *argv[])
 	//htonl formatea el numero que recibe al formato necesario
 	serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);
 	// escucharemos en el port 9050
-	serv_adr.sin_port = htons(9090);
+	serv_adr.sin_port = htons(50077);
 	if (bind(sock_listen, (struct sockaddr *) &serv_adr, sizeof(serv_adr)) < 0)
 		printf ("Bind Error");
 	//La cola de peticiones pendientes no podr? ser superior a 4
 	if (listen(sock_listen, 2) < 0)
 		printf("Listening Error");
-	int i;
 	
-	for(;;){
+	pthread_t thread[100];
+	
+	for(;;)
+	{
 		printf ("Listening...\n");
 		
 		sock_conn = accept(sock_listen, NULL, NULL);
 		printf ("User connected\n");
+		printf("%d\n",sock_conn);
+		
+		sockets[i] = sock_conn;
+		
 		//sock_conn es el socket que usaremos para este cliente
 		
-		
-		int kill=0;//Para desconectar socket
-		
-		while(kill==0) //Bucle de demanda de servicios
-		{
-			
-			ret=read(sock_conn,buff, sizeof(buff));
-			printf ("Data received\n");
-			
-			
-			buff[ret]='\0';//Se añade marca de fin de líne de la string
-			
-			printf ("Packet received: %s\n",buff);
-			
-			char *p = strtok( buff, "/");
-			int codigo =  atoi (p);//Extracción de código del servicio
-			char username[20];
-			char password[20];
-			
-			if(codigo==0){
-				kill=1;//Acabar bucle
-			}
-			
-			if((codigo!=0)&&(codigo!=6)){//Extracción de info
-				p = strtok( NULL, "/");  
-				strcpy(username,p);
-				p = strtok( NULL, "/");
-				strcpy(password,p);
-				
-				printf ("Username: %s, Password: %s\n",username,password);
-				
-			}
-			
-			if (codigo ==1){//Registrarse a la BBDD
-				Register(username,password);//Función de registro a la BBDD
-				strcpy(buff2,"Done");
-			}		
-			
-			else if (codigo ==2){//Login
-				int res;
-				res=Login(username,&list,password);
-				
-				if(res==0){//Existe usuario en el sistema
-					
-					int user_added = AddUser(&list,username);//A�adir usuario lista conectados
-					
-					if(user_added==0){
-						printf("User %s added to list correctly\n",username);
-						strcpy(buff2,"Done");
-					}
-					else{
-						printf("Error adding user to the list\n");
-					}
-				}
-					
-				else{
-						printf("No user with this username\n");//No existe usuario en el sistema
-					}
-					
-			}		
-			else if (codigo == 3)//Siguiente servicio
-			{
-				printf ("paso3\n");
-				int res1;
-				res1 = ConsultaDavid(username,password);
-				printf("el valor es: %d \n", res1);
-				sprintf(buff2,"el tiempo maximo de una partida es: %d", res1);
-			}
-			else if (codigo ==4)
-			{//Siguiente servicio
-				
-				float ratio;
-				ratio=GetRatio(username,password);
-				if(ratio > 0){
-					sprintf(buff2,"%f,",ratio);
-					//strcpy(buff2,"Done,");
-				}
-				else
-				   strcpy(buff2,"Fail,");
-				
-			}
-			
-			else if (codigo ==5)
-			{//Siguiente servicio
-				
-				int res2 = ConsultaSergi(username,password);
-				sprintf(buff2,"%d,",res2);
-			}
-			
-			else if (codigo ==6)
-			{//Servicio de clientes online
-				
-				char online_users[300];
-				printf("entrada servicio\n");
-				GetConnectedUsers(&list,online_users);
-				printf("Online users: %s\n",online_users);
-				
-				if(online_users==NULL){
-					printf("No users connected at this moment\n");
-				}
-				else{
-					strcpy(buff2,online_users);
-				}
-			}
-
-			
-			if(codigo!=0){
-				printf ("%s\n", buff2);
-				// Y lo enviamos
-				write (sock_conn,buff2, strlen(buff2));
-			}
-			// Se acabo el servicio para este cliente
-			
-		}
-		close(sock_conn); //Cerrar conexión
+		//crear thead y decirle lo que tiene que hacer
+		printf("Entrada\n");
+		pthread_create (&thread[i], NULL, AtenderCliente,&sockets[i]);
+		i++;
 	}
 }

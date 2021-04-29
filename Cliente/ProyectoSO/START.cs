@@ -16,7 +16,6 @@ namespace ProyectoSO
     public partial class START : Form
     {
         System.Media.SoundPlayer sonido_puntero = new System.Media.SoundPlayer(Properties.Resources.fsx_sonido_puntero);
-        System.Media.SoundPlayer sonido_inicio = new System.Media.SoundPlayer(Properties.Resources.sound_start);
 
         Socket server;
         Thread atender;
@@ -110,8 +109,8 @@ namespace ProyectoSO
         {
             //Creamos un IPEndPoint con el ip del servidor y puerto del servidor 
             //al que deseamos conectarnos
-            IPAddress direc = IPAddress.Parse("192.168.56.103");
-            IPEndPoint ipep = new IPEndPoint(direc, 9075);
+            IPAddress direc = IPAddress.Parse("147.83.117.22");//192.168.56.104, Local addr MV
+            IPEndPoint ipep = new IPEndPoint(direc, 50077);
 
 
             //Creamos el socket 
