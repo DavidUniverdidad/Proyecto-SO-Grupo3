@@ -25,3 +25,6 @@
 
 ###### Versión 4 generada por David
 ###### Versión 4 verificada por Sergi
+###### Versión 4 comunicada por Ferran
+
+- URL: [Vídeo V4](https://www.youtube.com/watch?v=Qg6tFdF30D4 "Video V4")
