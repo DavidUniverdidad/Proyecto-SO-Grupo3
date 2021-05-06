@@ -16,7 +16,12 @@
 
 ## Versión 3
 
-###### Versión 2 generada por Sergi
-###### Versión 2 verificada por Ferran
-###### Versión 2 comunicada por David
+###### Versión 3 generada por Sergi
+###### Versión 3 verificada por Ferran
+###### Versión 3 comunicada por David
 - URL: [Vídeo V3](https://www.youtube.com/watch?v=bGYGeIkSLyc "Video V3")
+
+## Versión 4
+
+###### Versión 4 generada por David
+###### Versión 4 verificada por Sergi
