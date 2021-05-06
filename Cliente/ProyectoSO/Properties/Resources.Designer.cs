@@ -59,25 +59,5 @@ namespace ProyectoSO.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hexagonal_technology_pattern_mesh_background_with_text_space_1017_26293 {
-            get {
-                object obj = ResourceManager.GetObject("hexagonal-technology-pattern-mesh-background-with-text-space_1017-26293", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Logo_UPC_svg {
-            get {
-                object obj = ResourceManager.GetObject("Logo_UPC.svg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="START.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="START.Designer.cs">
+      <DependentUpon>START.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -60,8 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="START.resx">
+      <DependentUpon>START.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -94,6 +103,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo_UPC.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\click_fsx.wav.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark-gradient-blue-background_1258-1365.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProyectoSO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1579546929518-9e396f3cc809.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56-569958_dice-game-hd-png-download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dados.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fsx.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fsx_radio_bttn.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fsx_sonido_puntero.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sound_menu.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sound_start.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
