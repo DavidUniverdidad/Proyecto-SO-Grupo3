@@ -16,7 +16,14 @@ namespace ProyectoSO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            try
+            {
+                Application.Run(new START());
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Error al inicio, intentar de nuevo");
+            }
         }
     }
 }
