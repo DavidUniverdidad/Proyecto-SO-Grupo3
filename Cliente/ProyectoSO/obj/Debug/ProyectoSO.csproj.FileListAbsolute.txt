@@ -1,0 +1,108 @@
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe.config
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\bin\Debug\ProyectoSO.pdb
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csprojAssemblyReference.cache
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form2.resources
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Properties.Resources.resources
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.GenerateResource.cache
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.CoreCompileInputs.cache
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.exe
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.pdb
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.GAME.resources
+C:\share\S1\Proyecto-SO-Grupo3-2\Proyecto-SO-Grupo3-2\Cliente\ProyectoSO\obj\Debug\ProyectoSO.START.resources
+C:\share\S1\Versión 3\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe.config
+C:\share\S1\Versión 3\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe
+C:\share\S1\Versión 3\Cliente\ProyectoSO\bin\Debug\ProyectoSO.pdb
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csprojAssemblyReference.cache
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.GAME.resources
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.START.resources
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form2.resources
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Properties.Resources.resources
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.GenerateResource.cache
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.CoreCompileInputs.cache
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.exe
+C:\share\S1\Versión 3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.pdb
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe.config
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\bin\Debug\ProyectoSO.pdb
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csprojAssemblyReference.cache
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.GAME.resources
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.START.resources
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form2.resources
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Properties.Resources.resources
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.GenerateResource.cache
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.CoreCompileInputs.cache
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.exe
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.pdb
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form4.resources
+C:\share\S1\Proyecto-SO-Grupo3\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form5.resources
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe.config
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\bin\Debug\ProyectoSO.pdb
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csprojAssemblyReference.cache
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.GAME.resources
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form4.resources
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form5.resources
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.START.resources
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form2.resources
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Properties.Resources.resources
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.GenerateResource.cache
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.exe
+C:\Users\sergi\Desktop\versión 6 Actualizado\Cliente\ProyectoSO\obj\Debug\ProyectoSO.pdb
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe.config
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\bin\Debug\ProyectoSO.pdb
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csprojAssemblyReference.cache
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.GAME.resources
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form4.resources
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form5.resources
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.START.resources
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form2.resources
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Properties.Resources.resources
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.GenerateResource.cache
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.exe
+C:\Users\USUARIO\Pictures\Versión 6 Actualizado + Chat-20210605T083650Z-001\Versión 6 Actualizado + Chat\Cliente\ProyectoSO\obj\Debug\ProyectoSO.pdb
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe.config
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\bin\Debug\ProyectoSO.pdb
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csprojAssemblyReference.cache
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.GAME.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form4.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form5.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.START.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form2.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Properties.Resources.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.GenerateResource.cache
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.exe
+C:\Users\USUARIO\Pictures\Versión 6 - Juego OP IV-20210609T145049Z-001\Versión 6 - Juego OP IV\Cliente\ProyectoSO\obj\Debug\ProyectoSO.pdb
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe.config
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\bin\Debug\ProyectoSO.pdb
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csprojAssemblyReference.cache
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.GAME.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form4.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form5.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.START.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form2.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Properties.Resources.resources
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.GenerateResource.cache
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.exe
+C:\Users\USUARIO\Pictures\Versión 6 - Juego Final I-20210611T094533Z-001\Versión 6 - Juego Final I\Cliente\ProyectoSO\obj\Debug\ProyectoSO.pdb
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe.config
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\bin\Debug\ProyectoSO.exe
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\bin\Debug\ProyectoSO.pdb
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csprojAssemblyReference.cache
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.GAME.resources
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form4.resources
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form5.resources
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.START.resources
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Form2.resources
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.Properties.Resources.resources
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.GenerateResource.cache
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.exe
+C:\Users\USUARIO\Documents\G3-TELECOTRIVIAL\Cliente\ProyectoSO\obj\Debug\ProyectoSO.pdb
