@@ -35,7 +35,7 @@
 ###### Versión 5 verificada por David
 ###### Versión 5 comunicada por Sergi
 
-- URL: [Vídeo V5](https://www.youtube.com/watch?v=9FlWWQuG90Q "Video V5")
+- URL: [Vídeo V5](https://youtu.be/paElmf2cq4Q "Video V5")
 
 ## Versión 6
 
@@ -45,6 +45,6 @@
 
 ###### Versión FINAL generada por Ferran
 
-- URL: [Vídeo FINAL](https://youtu.be/paElmf2cq4Q "Video FINAL")
+- URL: [Vídeo FINAL](https://www.youtube.com/watch?v=9FlWWQuG90Q "Video FINAL")
 
 
