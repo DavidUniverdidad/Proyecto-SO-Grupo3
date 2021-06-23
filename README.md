@@ -36,3 +36,15 @@
 ###### Versión 5 comunicada por Sergi
 
 - URL: [Vídeo V5](https://youtu.be/paElmf2cq4Q "Video V5")
+
+## Versión 6
+
+###### Versión 6 generada, verificada por Ferran
+
+## Versión FINAL
+
+###### Versión FINAL generada por Ferran
+
+- URL: [Vídeo FINAL](https://youtu.be/paElmf2cq4Q "Video FINAL")
+
+
